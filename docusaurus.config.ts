@@ -33,13 +33,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/QCDIS/NaaVRE-website/tree/main/packages/create-docusaurus/templates/shared/'
+          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/QCDIS/NaaVRE-website/tree/main/packages/create-docusaurus/templates/shared/'
+          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
         },
         theme: {
           customCss: './src/css/custom.css'
