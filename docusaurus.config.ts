@@ -79,7 +79,7 @@ const config: Config = {
           items: [
             {
               label: 'About NaaVRE',
-              href: '/docs/'
+              href: '/docs/about'
             },
             {
               label: 'Getting started',
