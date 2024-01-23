@@ -43,6 +43,53 @@ The user can use two special variables in the cell code:
 Notice in the image above that the `conf_b` variable is declared in the first cell and used in the second and third cell.
 However, the `conf_b` is not showing up as input in the second and third cell.
 
+### Overriding definition of cell inputs and outputs
+
+:::warning
+This feature can result in broken containerized cells. Use it with caution.
+:::
+
+In normal circumstances, the component containerizer automatically determines the cell variables (inputs, outputs,
+params, confs), and dependencies.
+
+This can be overriden by adding a special comment to the cell. The comment contains a YAML document, beginning with
+`---` and ending with `...`.
+
+Example:
+
+```R
+# My cell name
+# ---
+# NaaVRE:
+#  cell:
+#   inputs:
+#    - my_input: String
+#    - my_other_input: Integer
+#   outputs:
+#    - my_output: List
+#    - my_other_output: List
+#   params:
+#    - param_something:
+#       type: String
+#       default_value: "my default value"
+#   confs:
+#    - conf_something_else:
+#       assignation: "conf_something_else = 'my other value'"
+#   dependencies:
+#    - name: yaml
+#    - name: numpy
+#      asname: np
+#    - name: signal
+#      module: scipy
+# ...
+
+(my cell code)
+```
+
+Partial override is not supported: all variables and dependencies must be specified if the comment is added to the cell.
+
+For the full syntax, see the [YAML document schema](https://github.com/QCDIS/NaaVRE/blob/main/jupyterlab_vre/services/extractor/cell_header.schema.json).
+
 ## Experiment Manager
 
 In the 'Experiment Manager' page you can compose and execute workflows. To compose a workflow click on the '+' button in
