@@ -111,6 +111,18 @@ The cells catalog contains all the cells that have been containerized.
 
 ![Cells Catalog](images/cells_catalog_1.png)
 
+### Re-containerizing cells used in a workflow
+
+When re-containerizing a cell used in a workflow, you might need to update the
+workflow itself:
+
+
+- If you only updated the cell's source code or dependencies: the workflow automatically uses the new version of the
+  cell.
+- If you changed the cell’s inputs, outputs or parameters: the workflow needs to be updated. Remove the cell from the
+  workflow, and add the new version from the catalogue.
+- If you changed the cell’s title: a new cell is created in the catalogue. Both the old and new cell can be used.
+  Workflows using the old cell don’t need to be updated.
 
 ## Notebook Search
 
