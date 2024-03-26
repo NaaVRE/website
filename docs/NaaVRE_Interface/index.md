@@ -50,14 +50,14 @@ This feature can result in broken containerized cells. Use it with caution.
 :::
 
 In normal circumstances, the component containerizer automatically determines the cell variables (inputs, outputs,
-params, confs), and dependencies.
+params, confs) and dependencies by analyzing the source code.
 
-This can be overriden by adding a special comment to the cell. The comment contains a YAML document, beginning with
+This can be overridden by adding a special comment to the cell. The comment contains a YAML document, beginning with
 `---` and ending with `...`.
 
 Example:
 
-```R
+```
 # My cell name
 # ---
 # NaaVRE:
@@ -86,7 +86,22 @@ Example:
 (my cell code)
 ```
 
-Partial override is not supported: all variables and dependencies must be specified if the comment is added to the cell.
+If an entry (e.g. `params:`) is omitted from the comment, the containerizer will try to determine the appropriate values from the source code.
+This makes it possible to override some variable types, while using the code analysis for others.
+In this example, the input and output are manually specified, while the dependencies, confs and params are determined from the source code (note how we specify that the cell has no outputs):
+
+```
+# My cell with partial override
+# ---
+# NaaVRE:
+#  cell:
+#   inputs:
+#    - my_input: String
+#   outputs: []
+# ...
+
+print(my_input, param_my_param)
+```
 
 For the full syntax, see the [YAML document schema](https://github.com/QCDIS/NaaVRE/blob/main/jupyterlab_vre/services/extractor/cell_header.schema.json).
 
