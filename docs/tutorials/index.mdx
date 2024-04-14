@@ -1,180 +1,214 @@
 ---
 sidebar_position: 2
 ---
+import TOCInline from '@theme/TOCInline';
 import ReactPlayer from 'react-player'
 import tutorialVideoURL from './videos/GettingStartedVRE.mp4';
 
 
-# Getting Started
+# Getting Started with NaaVRE tutorial
 
-This is a quick start guide of the basic usage and functionality of the  LifeWatch Notebook as a Virtual Research Environment 
-(NaaVRE) Platform and Notebook as a Virtual Research Environment (NaaVRE).
+The aim of this tutorial is to discover the basic functionalities of NaaVRE: logging in, starting your virtual lab, and creating a workflow from a notebook:
+
+<TOCInline toc={toc} />
 
 This is a screencast of the tutorial:
 
 <ReactPlayer controls width='100%' height='auto' url={tutorialVideoURL} />
 
+## Starting NaaVRE
 
-## Notebook as a Virtual Research Environment (NaaVRE) Platform
+Open the NaaVRE demo: https://naavre.lifewatch.dev.
 
-Navigate to the LifeWatch VRE Platform as a Service (VRE PaaS) and click on the 'Sign in' button.
+![Startin point](./images/1_starting_point.png)
 
-![Sign in](./images/sign_in_vre_1.png)
+### Signing in
 
-Click on the 'Sign in with Keycloak' button.
+Click on the 'Login' button.
 
-![Sign in](./images/sign_in_with_keycloak_1.png)
+![Sign in](./images/2_signin_1.png)
 
-Enter your credentials and click on the 'Sign in' button.
+Chose your preferred login method:
 
-![Sign in](./images/sign_in_with_keycloak_2.png)
+- option 1 (recommended): Google
+- option 2: Federation with EOSC (provides several options such as GitHub or ORCID)
 
-On the main panel, you will see several Virtual Labs (VLs). Select one of them. When in the VL you can see:
-* A decryption of the VL
-* The number of instances currently running by other users 
-* A lunch button to take you to your instance of Notebook as a Virtual Research Environment (NaaVRE)
-* Assets that are available to you:
+![Sign in](./images/2_signin_2.png)
+
+Log in with the chosen method (Google shown here)
+
+![Sign in](./images/2_signin_3.png)
+
+### Pick your collaborative virtual lab
+
+On the main panel, you will see several Virtual Labs (VLs).
+For this tutorial, select the 'NaaVRE Open Lab'.
+
+![Pick VRE](./images/3_pick_vre_1.png)
+
+When in the VL you can see:
+
+* A description of the VL
+* The instances started by other users
+* A button to start your own instance of the VL
+* Assets from the Virtual lab:
   * Workflow runs 
   * Data products
   * Geographical data products
 
-![VL](./images/vl_1.png)
+![Pick VRE](./images/3_pick_vre_2.png)
 
-To launch your instance of NaaVRE click on the 'Lunch my instance' button. where you will be redirected to the NaaVRE.
+### Starting your virtual lab
 
-## Notebook as a Virtual Research Environment (NaaVRE)
+Click on the 'Launch my instance' button.
+
+This opens a new tab where your virtual lab will be started. Click on the 'Sign in' button.
 
 On the new page click on the 'Sign in' button.
 
-![VL](./images/n-a-a-vre_1.png)
+![Start VRE](./images/4_start_vre_1.png)
 
-Next, you will see the JupiterLab environment if the Launcher page is not open it by clicking 'File->New->New Launcher'.
+Your virtual lab instance starts up.
 
-![Launcher](./images/n-a-a-vre_launcher_1.png)
+![Start VRE](./images/4_start_vre_2.png)
 
-### Create a new Python Notebook
+### The NaaVRE interface in Jupyter Lab
 
-Click on the 'Python 3' icon to create a new Python Notebook and in the first cell type the following code:
+You now see the NaaVRE interface in Jupyter lab.
+(You can read more details [here](../NaaVRE_Interface)).
+
+![Launcher](./images/5_naavre_interface.png)
+
+## From notebook to workflow
+
+### Create a notebook
+
+Create a new Python or a R notebook by clicking on the 'Python 3' or the 'R' icon under 'Notebook' on the launcher tab.
+
+:::note If the Launcher page is not open, click on the new tab button or 'File->New->New Launcher'.
+:::
+
+
+![Create notebook](./images/6_create_notebook_1.png)
+
+Add some code to the notebook. For this tutorial, we will use a simple 'hello, world' example over two cells. The first one sets the data (in a real world application, this cell could download data from a repository), the second one prints the data (this could correspond to processing the data and generating some figures).
+
+If you chose Python:
 
 ```python
-# input list
-a = ['a','b','c']
+# Input list
+names = ["Alice", "Bob"]
 ```
-
-![Python Notebook](./images/n-a-a-vre_python_notebook_1.png)
-
-Add a new cell and type the following code:
 
 ```python
-# process the list
-for elem in a:
-    res = elem + '_processed'
-    print(res)
+# Process list
+for name in names:
+  print(f"Hello, {name}!")
 ```
 
-![Python Notebook](./images/n-a-a-vre_python_notebook_2.png)
+If you chose R:
 
-### Containerize Cells
+```R
+# Input list
+names = list("Alice", "Bob")
+```
 
-To containerize the cells select the first cell and on the left column click on the 'LifeWatch Panel' button.
+```R
+# Process list
+for (name in names) {
+  print(sprintf("Hello, %s!", name))
+}
+```
 
-![LifeWatch Panel](./images/lifeWatch_panel1.png)
+![Create notebook](./images/6_create_notebook_3.png)
 
-On the left panel, you will see a preview of the containerized cell with any inputs, outputs, and dependencies
+### Containerize the cells
 
-![LifeWatch Panel](./images/lifeWatch_panel2.png)
+Open the component containerizer panel by clicking on the icon in the left-hand bar.
 
-To containerize the cell select the type of the 'a' output as a 'List', the base image as miniconda3 and click on the 'Create' button.
+![Containerize cells](./images/7_containerize_1.png)
 
-![containerize](./images/containerize_1.png)
+Select the first cell to containerize it.
 
-If the containerization is successful you will see a pop-up message.
+On the left panel, you will see a preview of the containerized cell with the detected inputs, outputs, parameters and dependencies (if any).
 
-![containerize](./images/containerize_2.png)
+![Containerize cells](./images/7_containerize_2.png)
 
-Repeat the same process for the second cell.
+Set the variable types to 'List'. For Python notebooks, type is inferred automatically.
 
-![containerize](./images/containerize_3.png)
+![Containerize cells](./images/7_containerize_3.png)
 
-If you get an error message like the one below, clear the 'Base Image' selection and re-set it to 'miniconda3'.
+Select the base image for the containerized cell ('r' or 'python' depending on your notebook).
 
-![containerize](./images/containerize_error_1.png)
+![Containerize cells](./images/7_containerize_4.png)
 
-### Compose a Workflow
+Click on the 'Create' button.
 
-To compose a workflow open a new Launcher page and click on the 'Experimenter Manager' icon.
+:::warning
+This publishes the contents of the cell to a public repository on GitHub. Do not containerize cells containing passwords, API keys, or any code you wish to keep private.
+:::
 
-![Experimenter Manager](./images/experimenter_manager_1.png)
+![Containerize cells](./images/7_containerize_5.png)
 
-On the Experiment Manager page on the bottom right click on the '+' button and select the 'Cells Catalog'.
+Congratulations, you containerized your first cell!
 
-![Experimenter Manager](./images/experimenter_manager_2.png)
+![Containerize cells](./images/7_containerize_6.png)
 
-From the 'Cells Catalog' select the first cell you just containerized scroll down and click on the 'Add TO WORKSPACE' button.
+Repeat the containerization cells for the second cell in the notebook.
 
-![Experimenter Manager](./images/experimenter_manager_3.png)
+### Compose a workflow
 
-Repeat the same process for the second cell.
+To compose a workflow open a new tab and click on the 'Experimenter Manager' icon.
 
-Drag and drop the cell containing the name 'input list' to the composer on the main panel. Next drag and drop the special component called 'Splitter' from the Parallelization section and connect the 'input list' cell with the 'Splitter'. Finally, drag and drop the cell containing the name 'process the list' to the composer and connect the 'Splitter' with the 'process the list' cell. In the end, the workflow should look like the one below.
+![Experimenter Manager](./images/8_workflow_1.png)
 
-![Experimenter Manager](./images/experimenter_manager_4.png)
+![Experimenter Manager](./images/8_workflow_2.png)
 
----
+Click on the 'Cells catalogue' button.
 
- **NOTE**
+![Experimenter Manager](./images/8_workflow_3.png)
 
- It is important to note that the direction of the connections between the cells is important as it indicates the flow of ]
- data dependencies between the cells. Therefore, the flow should be: 'input list' -> 'Splitter' -> 'process the list'.
+For each of the cells you created:
+- select the cell,
+- click on Add to workspace.
 
----
+![Experimenter Manager](./images/8_workflow_4.png)
 
-### Run the Workflow
+Drag and drop the two cells onto the canvas, as well as a 'splitter' cell.
 
-To run the workflow you must first make sure that your cells have been containerized. This usually takes a few minutes.
-You can check on the progress of the containerization by opening the 
-[GitHub Actions page](https://github.com/QCDIS/NaaVRE-cells-summerschool-23/actions).
+![Experimenter Manager](./images/8_workflow_5.png)
 
----
+Connect the cells nodes.
 
- **NOTE**
+:::note
+It is important to note that the direction of the connections between the cells is important as it indicates the flow of ]
+data dependencies between the cells. Therefore, the flow should be: 'Input list' -> 'Splitter' -> 'Process list'.
+:::
 
- The actions in the GitHub Actions page are triggered automatically when you containerize a cell. All cells from all users
- are containerized in the same GitHub Actions page. 
+![Experimenter Manager](./images/8_workflow_6.png)
 
----
+Click on the 'Run' button.
 
-To execute the workflow click on the '+' button in the bottom right corner of the page and select the 'Execute Workflow' 
-option.
+![Experimenter Manager](./images/8_workflow_7.png)
 
-![Experimenter Manager](./images/experimenter_manager_2.png)
+Click on 'Execute'
 
-![Experimenter Manager](./images/experimenter_manager_5.png)
+:::note
+If your workflow uses [parameters](../NaaVRE_Interface/#special-variables), you can set their values here. To use values from the notebook, click on 'Use notebook values'.
+:::
 
-Select the 'Execute' button. If the workflow submission is successful you will see a pop-up message.
+![Experimenter Manager](./images/8_workflow_8.png)
 
-![Experimenter Manager](./images/experimenter_manager_6.png)
+### Monitor the workflow
 
-To check the progress of the workflow click on the link on the pop-up message. This will take you to the workflow engine page.
+To check the progress of the workflow click on the link on the pop-up message.
 
-![Workflow Engine](./images/workflow_engine_1.png)
+![Experimenter Manager](./images/8_workflow_9.png)
 
-From there you can sign in and check the progress of the workflow by selecting 'If your organization has configured single sign-on:' option
+This will take you to the workflow engine page where you can see the progress of the workflow. Click on a node to see its status and logs.
 
-![Workflow Engine](./images/workflow_engine_2.png)
+![Workflow Engine](./images/9_argo_1.png)
 
-In the login page enter the same credentials you used to sign in to the VRE PaaS. If you are directed to an empty page go back to the 'Experiment Manager' page and click on the link again.
-
-![Workflow Engine](./images/workflow_engine_3.png)
-
-This time you should be able to see the progress of the workflow execution.
-
-![Workflow Engine](./images/workflow_engine_4.png)
-
-Once the workflow execution is finished you can see the results generated by each cell by clicking on that cell. For example, to see the results of the 'process-the-list' cell click on one of the cells
-
-![Workflow Engine](./images/workflow_engine_5.png)
-
-On the right panel, you will see the cells' information such as start and end time. At the bottom of the panel, you can see three buttons: 'MANIFEST', 'LOGS', and 'EVENTS'. By clicking on the 'LOGS' button you can see the message printed by the cell during execution.
-
-![Workflow Engine](./images/workflow_engine_6.png)
+:::note
+The first time you open the workflow engine, select the 'single sign-on' login, and close the welcome message.
+:::
