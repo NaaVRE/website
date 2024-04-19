@@ -139,6 +139,27 @@ workflow itself:
 - If you changed the cell’s title: a new cell is created in the catalogue. Both the old and new cell can be used.
   Workflows using the old cell don’t need to be updated.
 
+### Managing files in workflows
+
+To transfer files between containerized cells when running the workflow, they need to be placed in the `/tmp/data/` repository. Files outside of this repository are not preserved from one containerized cell to the other.
+
+The best practice for exchanging files between cells is to save the file in `/tmp/data/`, and pass the filename between the cells. Example:
+
+```python
+# Write file
+filename = '/tmp/data/my_file.csv'
+with open(filename, 'w') as f:
+    f.write('file content')
+```
+
+```python
+# Read file
+with open(filename, 'r') as f:
+    data = f.read()
+```
+
+![Files workflow example](images/files_workflow_example.png)
+
 ## Notebook Search
 
 In the 'Notebook Search' page you can search for notebooks relevant to your research. To search for notebooks click on
