@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.1">
 <title data-rh="true">The NaaVRE Interface | NaaVRE</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://qcdis.github.io/NaaVRE-website/img/social-card.png"><meta data-rh="true" name="twitter:image" content="https://qcdis.github.io/NaaVRE-website/img/social-card.png"><meta data-rh="true" property="og:url" content="https://qcdis.github.io/NaaVRE-website/docs/NaaVRE_Interface/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="The NaaVRE Interface | NaaVRE"><meta data-rh="true" name="description" content="The Notebook as a Virtual Research Environment (NaaVRE) is a set of tools to allow users to containerize cells, compose"><meta data-rh="true" property="og:description" content="The Notebook as a Virtual Research Environment (NaaVRE) is a set of tools to allow users to containerize cells, compose"><link data-rh="true" rel="icon" href="/NaaVRE-website/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://qcdis.github.io/NaaVRE-website/docs/NaaVRE_Interface/"><link data-rh="true" rel="alternate" href="https://qcdis.github.io/NaaVRE-website/docs/NaaVRE_Interface/" hreflang="en"><link data-rh="true" rel="alternate" href="https://qcdis.github.io/NaaVRE-website/docs/NaaVRE_Interface/" hreflang="x-default"><link rel="stylesheet" href="/NaaVRE-website/assets/css/styles.5e13ec54.css">
-<script src="/NaaVRE-website/assets/js/runtime~main.81cc32cd.js" defer="defer"></script>
+<script src="/NaaVRE-website/assets/js/runtime~main.6034c057.js" defer="defer"></script>
 <script src="/NaaVRE-website/assets/js/main.9a1f84e9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,21 +26,22 @@ to be filled in by the user when containerizing a cell. Currently, the supported
 <p>Under the &#x27;Inputs&#x27; and &#x27;Outputs&#x27; there is the &#x27;Base Image&#x27; selection. This is the base image that will be used to build
 the container. The default base image is &#x27;miniconda3&#x27;. The user can select a different base image from the drop down.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="special-variables">Special Variables<a href="#special-variables" class="hash-link" aria-label="Direct link to Special Variables" title="Direct link to Special Variables">​</a></h3>
-<p>The user can use two special variables in the cell code:</p>
+<p>Special variables can be used in the cell code. Their name should contain one of the following prefixes:</p>
 <ul>
 <li>
-<p><code>param_</code>: This variable is used to pass input parameters to the cell. These parameters are passed to the cell during
-execution and are requested by the user every time a workflow is executed that contains the cell with the parameters.
-<a href="https://github.com/QCDIS/vre_documetation/assets/9680609/fea3d96b-97d3-43cd-b009-b5bd4537de5a" target="_blank" rel="noopener noreferrer">Param_example.webm</a></p>
+<p><code>param_</code>: these variables are used to pass input parameters to a cell. They should be used to allow users to set their own values when running a workflow. When containerizing the cell, a default value is extracted from the code and saved to the catalogue. When running a workflow that contains the cell, users use the default value or set a custom one. The value is then passed to the cell during execution.</p>
+<p><a href="https://github.com/QCDIS/vre_documetation/assets/9680609/fea3d96b-97d3-43cd-b009-b5bd4537de5a" target="_blank" rel="noopener noreferrer">Param_example.webm</a></p>
 </li>
 <li>
-<p><code>conf_</code>: This variable is used to pass configuration parameters to all cells. <code>conf_</code> variables once deca-lied are visible
-by all cells of the workflow. They can be thought of as &#x27;global&#x27; variables therefore, they do not require to set their type
-like other variables.
-<a href="https://github.com/QCDIS/vre_documetation/assets/9680609/f7020f7f-69d9-4916-bb56-83ed64cb98a8" target="_blank" rel="noopener noreferrer">Conf_example.webm</a></p>
+<p><code>secret_</code>: these variables are used to pass secret parameters to a cell. They should be used for credentials such as passwords or API keys. They are similar to <code>param_</code> variables, but no default value is saved to the catalogue, and values are handled in a secure way when executing the workflow.</p>
+<p><img loading="lazy" alt="Component Containerizer secrets" src="/NaaVRE-website/assets/images/component_containerizer_secrets-fa5034d13a114e33e66e16e35e087b8c.png" width="898" height="894" class="img_ev3q"></p>
+</li>
+<li>
+<p><code>conf_</code>: these variables are used to pass configuration parameters to all cells. They are visible by all cells of the notebook. They can be thought of as &#x27;global&#x27; variables therefore, they do not require to set their type  like other variables. Their value is set when containerizing the cell, and cannot be updated when running the workflow.</p>
+<p><a href="https://github.com/QCDIS/vre_documetation/assets/9680609/f7020f7f-69d9-4916-bb56-83ed64cb98a8" target="_blank" rel="noopener noreferrer">Conf_example.webm</a></p>
+<p><img loading="lazy" alt="Component Containerizer" src="/NaaVRE-website/assets/images/component_containerizer_conf_1-9ce69c703a7b780adbfb968e37a56d77.png" width="859" height="611" class="img_ev3q"></p>
 </li>
 </ul>
-<p><img loading="lazy" alt="Component Containerizer" src="/NaaVRE-website/assets/images/component_containerizer_conf_1-9ce69c703a7b780adbfb968e37a56d77.png" width="859" height="611" class="img_ev3q"></p>
 <p>Notice in the image above that the <code>conf_b</code> variable is declared in the first cell and used in the second and third cell.
 However, the <code>conf_b</code> is not showing up as input in the second and third cell.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="overriding-definition-of-cell-inputs-and-outputs">Overriding definition of cell inputs and outputs<a href="#overriding-definition-of-cell-inputs-and-outputs" class="hash-link" aria-label="Direct link to Overriding definition of cell inputs and outputs" title="Direct link to Overriding definition of cell inputs and outputs">​</a></h3>
