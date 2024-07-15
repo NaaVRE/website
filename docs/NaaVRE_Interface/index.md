@@ -26,19 +26,21 @@ the container. The default base image is 'miniconda3'. The user can select a dif
 
 ### Special Variables
 
-The user can use two special variables in the cell code:
-* `param_`: This variable is used to pass input parameters to the cell. These parameters are passed to the cell during
-  execution and are requested by the user every time a workflow is executed that contains the cell with the parameters.
-[Param_example.webm](https://github.com/QCDIS/vre_documetation/assets/9680609/fea3d96b-97d3-43cd-b009-b5bd4537de5a)
+Special variables can be used in the cell code. Their name should contain one of the following prefixes:
 
+* `param_`: these variables are used to pass input parameters to a cell. They should be used to allow users to set their own values when running a workflow. When containerizing the cell, a default value is extracted from the code and saved to the catalogue. When running a workflow that contains the cell, users use the default value or set a custom one. The value is then passed to the cell during execution.
 
+  [Param_example.webm](https://github.com/QCDIS/vre_documetation/assets/9680609/fea3d96b-97d3-43cd-b009-b5bd4537de5a)
 
-* `conf_`: This variable is used to pass configuration parameters to all cells. `conf_` variables once deca-lied are visible
- by all cells of the workflow. They can be thought of as 'global' variables therefore, they do not require to set their type
- like other variables.
-[Conf_example.webm](https://github.com/QCDIS/vre_documetation/assets/9680609/f7020f7f-69d9-4916-bb56-83ed64cb98a8)
+* `secret_`: these variables are used to pass secret parameters to a cell. They should be used for credentials such as passwords or API keys. They are similar to `param_` variables, but no default value is saved to the catalogue, and values are handled in a secure way when executing the workflow.
 
-![Component Containerizer](images/component_containerizer_conf_1.png)
+  ![Component Containerizer secrets](images/component_containerizer_secrets.png)
+
+* `conf_`: these variables are used to pass configuration parameters to all cells. They are visible by all cells of the notebook. They can be thought of as 'global' variables therefore, they do not require to set their type  like other variables. Their value is set when containerizing the cell, and cannot be updated when running the workflow.
+
+  [Conf_example.webm](https://github.com/QCDIS/vre_documetation/assets/9680609/f7020f7f-69d9-4916-bb56-83ed64cb98a8)
+
+  ![Component Containerizer](images/component_containerizer_conf_1.png)
 
 Notice in the image above that the `conf_b` variable is declared in the first cell and used in the second and third cell.
 However, the `conf_b` is not showing up as input in the second and third cell.
