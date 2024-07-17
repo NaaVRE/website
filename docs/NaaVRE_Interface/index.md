@@ -107,6 +107,31 @@ print(my_input, param_my_param)
 
 For the full syntax, see the [YAML document schema](https://github.com/QCDIS/NaaVRE/blob/main/jupyterlab_vre/services/extractor/cell_header.schema.json).
 
+### Containerizing R cells
+
+While containerizing R code cells is similar to Python, R's characteristics make it more challenging and require additional steps. The type of detected variables will only be identified if they have been explicitly assigned a primitive value.
+
+```
+# Will be detected
+a <- 1L # Integer
+b <- 1.5 # Float
+c <- "foo" # String
+d <- list(1,2,3) # List
+
+# Will not be detected
+e <- round(1.555, 2)
+```
+
+The type detector can detect the type of variables that have not been explicitly assigned a primitive value.
+
+![type_detector_1](https://github.com/user-attachments/assets/28aebab5-a125-434a-a4b9-ef81dcfd1c0a)
+
+By pressing the `Type Detector` button, the selected cell will be executed by the kernel and the types of the detected variables will be retrieved. However, this does require that the selected cell is executable and that all used variables are initialized.
+
+![type_detector_2](https://github.com/user-attachments/assets/b209d692-2b70-4a2f-ad89-2964eb2f9d76)
+
+In R, new variables can be added to the environment without explicit initialization, leading to instances where additional inputs are detected. This is especially common when working with dataframes, where variables for columns may be implicitly created. Unwanted input variables can be removed by pressing the `X` button next to the variable.
+
 ## Experiment Manager
 
 In the 'Experiment Manager' page you can compose and execute workflows. To compose a workflow click on the '+' button in
