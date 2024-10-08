@@ -8,14 +8,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://qcdis.github.io',
+  url: 'https://naavre.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/NaaVRE-website/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'QCDIS',
-  projectName: 'NaaVRE',
+  organizationName: 'NaaVRE',
+  projectName: 'naavre.github.io',
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
 
@@ -33,11 +33,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
+          editUrl: 'https://github.com/NaaVRE/naavre.github.io/blob/main/'
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
+          editUrl: 'https://github.com/NaaVRE/naavre.github.io/blob/main/'
         },
         theme: {
           customCss: './src/css/custom.css'
@@ -63,7 +63,7 @@ const config: Config = {
           label: 'Documentation'
         },
         {
-          href: 'https://github.com/QCDIS/NaaVRE',
+          href: 'https://github.com/NaaVRE/naavre.github.io',
           label: 'GitHub',
           position: 'right'
         }
@@ -111,7 +111,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/QCDIS/NaaVRE'
+              href: 'https://github.com/NaaVRE/naavre.github.io'
             }
           ]
         }
