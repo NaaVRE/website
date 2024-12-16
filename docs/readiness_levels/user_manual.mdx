@@ -1,0 +1,20 @@
+## User manual
+The following guidelines can be used to determine the completeness of a user manual.
+
+* The virtual lab is explained from the following viewpoints:
+  * A conceptual viewpoint. There is an intuitive description of what happens.
+  * A mathematical viewpoint. How the real world system relates to the used mathematical algorithm is clear.
+  * A computational viewpoint: How the algorithm is converted into computational methods is explained.
+  * An engineering viewpoint: There is a description of the software architecture of the virtual lab.
+* The parameters are clear.
+    * It is clear what the ecological meaning of the parameter is.
+    * It is clear how to change these parameters.
+* There is a tutorial: Virtual lab developers are strongly encouraged to create a tutorial for virtual labs early on in the development. In the simplest case, this is the existing main notebook with a description of the processes that occur during execution.
+  * The tutorial can be done without supervision.
+* Known potential pitfalls in using the virtual lab are described.
+* There is a description of the standards used for data exchange with application programming interfaces and databases.
+* The intended audience is described. Recommended prior knowledge is listed.
+* Storage location
+  * Store the user manual for the virtual lab in the same git repository as the virtual lab assets.
+  * The user manual will be made available on [NaaVRE.net](https://naavre.net/) and should be separated from the codebase.
+  * Instructions on how to use a single notebook can be stored in the markdown of that notebook.
