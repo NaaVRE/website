@@ -14,8 +14,8 @@ To transition from conceptual proposal to co-development the following should be
 * Timeline
   - [ ] A timeline exists for the co-development, validation of the virtual lab and development of training material.
     - *Proposal:*
-      - *Workshop use 11 Feb - 11 May: At Netherlands Annual Ecology Meeting we would aim to have the lab ready for a workshop.*
-      - *From 11 May: Operational service*
+      - *L2 Validation phase: 11 Feb: At Netherlands Annual Ecology Meeting we could demonstrate the virtual lab.*
+      - *L3 Workshop use: 1 April 2025: Hirad meeting.*
 * Codebase
   - [X] A new virtual lab is created.
 * Version control
