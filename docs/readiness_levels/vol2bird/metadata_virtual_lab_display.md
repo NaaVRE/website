@@ -2,11 +2,12 @@
 sidebar_position: 1
 title: Vol2bird virtual lab
 ---
-**Short summary:** The Vol2bird virtual lab preprocesses KNMI weather radar data, and applies the Vol2bird algorithm to calculate vertical profiles of birds and other biological scatters. 
+### Easy processing of weather radar data to vertical profiles of birds.
 
-**Concept description** The virtual lab imports weather radar data from an API, maps it to a format readable by the vol2bird algorithm, 
-which produces a vertical profile of bird migration.  
-This virtual lab makes use of the existing algorithm Vol2bird, which is wrapped in this virtual lab to make it easy to use.
+**Conceptual description:** The Vol2bird virtual lab streamlines the extraction of bird migration data from weather radar data. 
+By automatically importing data from an API and converting it into a suitable format, the lab feeds the Vol2bird algorithm. 
+This algorithm then generates detailed vertical profiles of bird migration and other biological scatterers. 
+The virtual lab simplifies the use of Vol2bird by providing a user-friendly interface, making advanced bird migration research accessible to a wider audience.
 
 #### Keywords 
   - Bird migration
@@ -14,53 +15,51 @@ This virtual lab makes use of the existing algorithm Vol2bird, which is wrapped 
   - Weather radar
   - Altitude profile
 
-**Virtual lab type:** Data processing  
+#### Features
+- Easy KNMI data retrieval
+- Vol2bird algorithm
+- Mapping to Vol2bird input format
 
-**License:** Apache License 2.0
+![ images/Vol2bird_overview_image.drawio.png not found](images/Vol2bird_overview_image.drawio.png)
 
-#### Publication: 
+**License:** Apache-2.0
+
+#### Publication(s) 
 [Bird migration flight altitudes studied by a network of operational weather radars](https://doi.org/10.1098/rsif.2010.0116)  
 Dokter AM, Liechti F, Stark H, Delobbe L, Tabary P, Holleman I, J. R. Soc.  
 Interface, 8, 30–43, 2011, DOI 10.1098/rsif.2010.0116
 
-#### Point of contact:
-IBED - University of Amsterdam  
+#### Related virtual labs
+None
+
+#### Related projects
+None
+
+#### Documentation
+A user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
+
+#### Point of contact
 Berend-Christiaan Wijers  
+IBED - University of Amsterdam   
 [Email](koen.greuell@lifewatch.eu)
 
-#### Services list for metadata catalogue lifewatch?
-
-![ images/Vol2bird_overview_image.drawio.png not found](images/Vol2bird_overview_image.drawio.png)
-
-### Use cases
-In this virtual lab, you can:
+#### Possible applications
 - Select a date range to create a vertical profiles of bird migration.
 - Write your own pre-processor to map other weather radar data to a format readable by vol2bird.
 
+#### Recommended prior knowledge
+Picking custom dates to study bird migration using KNMI weather radar data is possible by only setting parameters.  
+Preprocessing other weather radar data to the vol2bird input format requires some experience in handling APIs and data in Python.
+
 ### Viewpoints
-#### Conceptual viewpoint. 
-*There is an intuitive description of what happens.* 
+#### Mathematical description.
+*ToDo: A mathematical description of the workflow.*
 
-#### Mathematical viewpoint.
-*Mathematical description of the workflow.*
+#### Computational description.
+*ToDo: How is the algorithm converted into computational methods?*
 
-#### Computational viewpoint.
-*How the algorithm is converted into computational methods is explained.*
+#### Engineering implementation / Architecture
+*ToDo: Description of the software architecture of the virtual lab.*
 
-#### Engineering viewpoint
-*There is a description of the software architecture of the virtual lab.*
-
-### Parameters
-    * It is clear what the ecological meaning of the parameter is.
-    * It is clear how to change these parameters.
-
-
-The following guidelines can be used to determine the completeness of a user manual.
-
-
-* There is a description of the standards used for data exchange with application programming interfaces and databases.
-* The intended audience is described. Recommended prior knowledge is listed.
-* Storage location
-  * Store the user manual for the virtual lab in the same git repository as the virtual lab assets.
-  * The user manual will be made available on [NaaVRE.net](https://naavre.net/) and should be separated from the codebase.
-  * Instructions on how to use a single notebook can be stored in the markdown of that notebook.
+### Standards
+*ToDo: description of the standards used for data exchange with application programming interfaces and databases.*
