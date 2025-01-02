@@ -3,18 +3,15 @@
 import Downward_arrow from './images/Downward_arrow.drawio.svg';
 
 Version 0.0.2
-co-development
 
 The NaaVRE platform facilitates data- and computing-centric research activities by enabling scientists to create customizable virtual labs for specific scientific purposes.
-A collaborative effort between domain specialists,  computational scientists, data scientists, and development and operations engineers
-ensures that virtual labs are optimized to support research effectively.
-Virtual labs evolve through distinct stages: Initially, development is the primary focus. As the lab matures,
-it transitions to support a first user, and ultimately, multiple users can conduct experiments within the environment.
+This is achieved through a collaborative co-development approach, bringing together domain specialists, computational scientists, data scientists, and development and operations engineers.
 
 This readiness level framework assists researchers in building virtual labs by:
-* Defining the content of virtual labs.
-* Describing the roles involved in the development and use of a virtual lab.
-* Describing the progression of a virtual lab through readiness levels, highlighting requirements, milestones and responsibilities.
+* Providing guidelines for the development of virtual labs.
+* Identifying stakeholders.
+* Describing the progression of a virtual lab through readiness levels,
+highlighting requirements, milestones and responsibilities.
 
 ## Content of a virtual lab
 A virtual lab provides a collection of research tools and assets customized for a specific research need:
@@ -22,17 +19,19 @@ A virtual lab provides a collection of research tools and assets customized for 
 * Assets created in the virtual lab.
 * Documents that support the usability of the virtual lab.
 
+### Assets
 Three types of assets can be created in a virtual lab:
 
 * The codebase: Any code written for the virtual lab. The codebase interacts with external resources such as software libraries and external data.
 * Internal data: Produced in the virtual lab by data processing, data analysis, and simulations.
 * Containerized cells and workflows.
 
+### Documents
 Besides assets, we encourage the developers of a virtual lab to create documents that aid the FAIRness and maintenance of the virtual lab:
 * Metadata.
 * Documentation, including a tutorial.
 
-## Virtual lab roles
+## Virtual lab roles /  Stakeholders
 NaaVRE aims to be a virtual research environment (VRE) that enables experts in computational ecology and ecological data analysis
 to create virtual labs.
 Our platform needs contributions from the multiple roles to enable innovative research methods. Some people will only have
@@ -74,9 +73,6 @@ with an increasing amount of independence from the virtual lab core developers a
     <li> <Downward_arrow/> [L4 - Operational service](readiness_levels/L4_operational_service): A provisioned virtual lab on operational infrastructure. It is ready to be operational for serving users from the general public. </li>
 </ul>
 
-    <div style={{ display: 'inline' }}>
-      This div will now display inline.
-    </div>
 | Level | Name                | Duration    | Developers                  | Users | Context dissemination            | Entering condition                                                     | Exit condition                                                                     |
 |-------|---------------------|-------------|-----------------------------|-------|----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | L0    | initial proposal    | 1-12 months | 0                           | 0     |                                  | A good idea & Available resources.                                     | Set up a concrete lab on the platform.                                             |
