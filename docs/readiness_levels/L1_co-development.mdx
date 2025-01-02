@@ -2,8 +2,22 @@
 sidebar_position: 1
 title: L1 - Co-development
 ---
-Where possible, do the following while building the virtual lab:
+### Start situation
+Co-development of the new virtual lab can be started when a basic virtual lab has been provisioned with the customized libraries
+ and configurations required by the development plan and a development team is ready to work on the subject.
 
+### During the co-development phase
+The development team preferably follows Agile practices to implement the components and workflows based on the plan.
+
+Where possible, the following should be done while building the virtual lab:
+
+* Documentation
+  * Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
+    * Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
+    * Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
+  * Create a directory for documentation of the virtual lab.
+    * Track the documentation with version control.
+  * Start each cell in a notebook with a title.
 * Security
   * Make sure personal tokens for APIs do not end up in version control. ToDo VLIC: Guideline for secret management [#276](https://github.com/QCDIS/projects_overview/issues/276).
 * Versioning
@@ -12,33 +26,27 @@ Where possible, do the following while building the virtual lab:
   * Store data that is only read by the virtual lab in an external catalogue and use an API to access this data.
 * Parallelization
   * Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
-* Documentation
-  * Publish virtual lab metadata outside the virtual lab. This will allow others to be aware of the context of the virtual lab from an early stage.
-    * Track the metadata with version control, such that the changes to metadata can be viewed by virtual lab users.
-    * Currently, we are choosing a default metadata catalogue. For progress, see issue [#275](https://github.com/QCDIS/projects_overview/issues/275).
-  * Create a directory for documentation of the virtual lab.
-    * Track the documentation with version control.
-  * Start each cell in a notebook with a title.
 
-#### Co-development responsibilities
+### Co-development responsibilities
 The following roles should be assigned during co-development:
 
-* Virtual lab owner / Principal investigator: Guides the development of the lab from the scientific viewpoint.
+* Golden users: Guide the development of the lab from the scientific viewpoint.
 * Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
 * Virtual lab code reviewer: Provides feedback on the user-friendliness, maintainability, and robustness of the
 source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.
 * Virtual research environment (VRE) development and operations engineers: Support the creation of the new virtual lab
 by giving the core development team advice and changing the virtual research environment where necessary.
 
-#### Co-development milestones
+### Co-development milestones
 Two milestones should be reached during co-development:
 
 * The publication of the metadata.
 * A demonstration of a running the workflow in the virtual lab.
 
-### From co-development to the validation phase
-To transition from co-development to the validation phase, a usability study should be done.
-The usability study should consider at least the following criteria:
+### Exit conditions
+The lab transitions from co-development to the validation phase, when the technical development has been finished and
+ the lab is ready to conduct the scientific experiments on the required scale.
+For this at least the following criteria should be checked:
 
 * Documentation
   - [ ] The virtual lab metadata is available outside the virtual lab.
