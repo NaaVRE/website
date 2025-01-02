@@ -26,6 +26,8 @@ Where possible, the following should be done while building the virtual lab:
   * Store data that is only read by the virtual lab in an external catalogue and use an API to access this data.
 * Parallelization
   * Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
+* Workflow
+  * Prepare and perform a demonstration of the virtual lab to inform the community supporter of the possibilities in the virtual lab.
 
 ### Co-development responsibilities
 The following roles should be assigned during co-development:
@@ -34,8 +36,11 @@ The following roles should be assigned during co-development:
 * Virtual lab core developers: One or multiple core developers create a new virtual lab in NaaVRE.
 * Virtual lab code reviewer: Provides feedback on the user-friendliness, maintainability, and robustness of the
 source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.
-* Virtual research environment (VRE) development and operations engineers: Support the creation of the new virtual lab
+* Community supporter: Receives a demonstration of the virtual lab to gain insight in the virtual lab and potential use cases.
+* Virtual lab coordinator: Coordinate the co-development between the golden users, core developers and DevOps engineers.
+* Virtual research environment (VRE) development and operations (DevOps) engineers: Support the creation of the new virtual lab
 by giving the core development team advice and changing the virtual research environment where necessary.
+    Advice on the right infrastructure for the virtual lab.
 
 ### Co-development milestones
 Two milestones should be reached during co-development:
@@ -65,3 +70,4 @@ Currently, you can verify this by manually executing all cells in the notebook o
   - [ ] The notebook cells can be containerized.
 * Workflow execution
   - [ ] The containerized cells can run without any modifications.
+  - [ ] It is possible to give a demonstration of the virtual lab.
