@@ -1,5 +1,5 @@
 export const L0CommunitySupporter = () => 'Reaches out to domain scientists who have the potential of becoming golden users.';
-export const L1CommunitySupporter = () => 'Gets a demonstration of the virtual lab at the end of L1 from the golden users to gain insight in the virtual lab and potential use cases.';
+export const L1CommunitySupporter = () => 'At the end of L1 gets a demonstration of the virtual lab from the golden users to gain insight in the virtual lab and potential use cases.';
 export const L2CommunitySupporter = () => 'Finds potential silver users to take part in the trainings in the next phase.';
 export const L3CommunitySupporter = () => 'Invites silver users to the virtual lab. Suggests domain scientists to the golden users as potential members of the scientific steering board.';
 export const L4CommunitySupporter = () => 'Identifies any potential new golden users from the community using the virtual lab.';
@@ -21,7 +21,9 @@ export const L1DevOps = () => 'Support the creation of the new virtual lab by gi
 export const L2DevOps = () => 'Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.';
 
 export const L1CoreDeveloper = () => 'Develop the content of the new virtual lab in NaaVRE.';
-export const L2CoreDeveloper = () => 'Provide support to the golden users executing experiments in the virtual lab.';
+export const L2CoreDeveloper = () => 'Provide support to the golden users executing experiments in the virtual lab. Help prepare the virtual lab for workshop use.';
+export const L3CoreDeveloper = () => 'Development of the main virtual lab is kept in the hands of core developers or taken over by the user community.';
+export const L4CoreDeveloper = () => 'Development of the main virtual lab is kept in the hands of core developers or taken over by the user community.';
 
 export const L1Reviewer = () => 'Provides feedback on the user-friendliness, maintainability, and robustness of the source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.';
 
