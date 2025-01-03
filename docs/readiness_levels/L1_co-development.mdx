@@ -9,7 +9,7 @@ Co-development of the new virtual lab can be started when a basic virtual lab ha
  and configurations required by the development plan and a development team is ready to work on the subject.
 
 ### During the co-development phase
-The development team preferably follows Agile practices to implement the components and workflows based on the plan.
+The development team preferably follows Agile practices to implement the components and workflows based on the development plan.
 
 Where possible, the following should be done while building the virtual lab:
 
@@ -25,6 +25,7 @@ Where possible, the following should be done while building the virtual lab:
 * Versioning
   * Pin versions of used software and libraries in the dependencies to prevent compatibility problems when updates occur to the packages and software.
 * Data
+  * Prepare the data for scientific experiments.
   * Store data that is only read by the virtual lab in an external catalogue and use an API to access this data.
 * Parallelization
   * Parallelize the execution of the parts of the code where this is useful. A tutorial is available [here](https://github.com/QCDIS/lifewatch-notebooks/blob/main/NaaVRE-tutorials/splitting-classic.ipynb).
@@ -51,7 +52,7 @@ Two milestones should be reached during co-development:
 ### Exit conditions
 The lab transitions from co-development to the validation phase, when the technical development has been finished and
  the lab is ready to conduct the scientific experiments on the required scale.
-For this at least the following criteria should be checked:
+For this, at least the following criteria should be checked:
 
 * Documentation
   - [ ] The virtual lab metadata is available outside the virtual lab.
@@ -60,12 +61,17 @@ For this at least the following criteria should be checked:
   - [ ] Personal tokens are not tracked by version control.
 * Versioning
   - [ ] Versions of used software and libraries are pinned.
+* Data
+  - [ ] The data is ready for scientific experiments.
+  - [ ] Data that is only read by the virtual lab is stored in an external catalogue.
 * Codebase
   - [ ] The code executes without errors: The code can be executed without errors.
 Currently, you can verify this by manually executing all cells in the notebook on a machine on which the code was not developed (to ensure no references are made to local resources).
   - [ ] The responsibility of each cell in the notebook is clear and can be described in a single sentence.
   - [ ] The coding style is consistent and follows a style guide e.g. For Python [PEP 8](https://peps.python.org/pep-0008/).
-  * [ ] Parallel processing is applied where suitable.
+  - [ ] Parallel processing is applied where suitable.
+  - [ ] There are clear errors when expected files and objects are not found.
+  - [ ] External code use, such as command-line interface tools, are clearly labeled.
 * Containerization
   - [ ] The notebook cells can be containerized.
 * Workflow execution
