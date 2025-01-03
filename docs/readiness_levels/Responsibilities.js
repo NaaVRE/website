@@ -25,7 +25,7 @@ export const L2CoreDeveloper = () => 'Provide support to the golden users.';
 export const L1Reviewer = () => 'Provides feedback on the user-friendliness, maintainability, and robustness of the source code and other assets. We recommend starting with reviews early on in the development process, as this may contribute to a clear architecture, and good code quality.';
 
 export const L1InfrastructureSupporter = () => 'Advises and provides the infrastructure for the virtual lab.';
-export const L2InfrastructureSupporter = () => 'Prepares the infrastructure for the trainings.';
+export const L2InfrastructureSupporter = () => 'Scales infrastructure if needed for the experiments. Prepares the infrastructure for the trainings.';
 export const L3InfrastructureSupporter = () => 'Ensures the infrastructure can support the training sessions.';
 export const L4InfrastructureSupporter = () => 'Monitors, provides, and adjusts infrastructure for the virtual lab.';
 
