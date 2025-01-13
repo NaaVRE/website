@@ -2,13 +2,21 @@
 sidebar_position: 1
 title: L2 - Validation phase
 ---
-Besides running scenarios in the virtual lab, the following should be done per category during the validation phase:
+import * as Responsibilities from './Responsibilities.js';
+
+### Start situation
+At the start of the validation phase, the virtual lab has the required components and the workflow has been developed and tested.
+Additionally the scientific (golden) user has made the data sets ready for the experiments.
+
+### During the validation phase
+The golden user will conduct experiments in the virtual lab in this phase.
+The following should also be done phase:
 
 * Data
   * Make data fair.
   * Follow the community standards of the relevant domains for reading, writing and exchanging data.
 * Metadata
-  * Complete all metadata fields
+  * Complete all metadata fields.
 * Scenarios
   * Make sure and describe how the virtual lab can be used on different scenarios, i.e. other datasets and with other parameters.
 * Versioning
@@ -24,26 +32,32 @@ Besides running scenarios in the virtual lab, the following should be done per c
   * Define clear responsibilities of all notebook cells, methods and classes.
 
 ### Validation phase milestones
-The submission for publication of one or two papers:
-
-1. A paper in the ecosystem domain presenting the scenarios run in the virtual lab.
-2. A technical paper focusing on the infrastructure part of the virtual research environment.
-
-Additionally, the virtual lab should be made publicly available.
+* The submission for publication of a paper in the ecosystem domain presenting the scenarios run in the virtual lab.
+* The lab becoming publicly available.
+* Potentially, besides a domain paper, the submission for publication of a technical paper focusing on the infrastructure part of the virtual research environment.
 
 ### Validation phase responsibilities
 The following roles should be assigned during the validation phase:
 
-* Virtual lab owner / Principal investigator: Uses the virtual lab to do their research. Publishes a paper in the ecosystem domain.
-* Virtual lab core developers: Provide support to the virtual lab owner.
-* Networked infrastructures scientist: Publishes a technical paper.
-* Virtual lab trainer: Once the virtual lab owner, and reviewers believe the virtual lab to be ready to be used by others,
-the virtual lab trainer tries out the virtual lab and makes suggestions. Helps the virtual lab owner identify issues arising when others start using the virtual lab.
-* VRE DevOps engineer: Support the core developers and golden user by providing advise and changing the virtual research environment where necessary.
+* Golden users: <Responsibilities.L2GoldenUser/>
+* Virtual lab core developers: <Responsibilities.L2CoreDeveloper/>
+* Community supporter: <Responsibilities.L2CommunitySupporter/>
+* Virtual lab trainer: <Responsibilities.L2Trainer/>
+* Infrastructure supporter: <Responsibilities.L2InfrastructureSupporter/>
+* VRE researcher: <Responsibilities.L2VREResearcher/>
+* Virtual lab coordinator: <Responsibilities.L2Coordinator/>
+* VRE DevOps engineer: <Responsibilities.L2DevOps/>
 
-### From the validation phase to workshop use
-The virtual lab can transition to workshop use, if it meets the criteria for co-development, and additionally meets the following requirements:
+### Exit condition
+The virtual lab transitions to workshop use, once validation of the lab by doing scientific experiments has been done and a scientific paper is ready for publication.
 
+It is important to find out who would be potential silver users of the virtual lab. In case no match between the virtual lab
+and potential silver users can be found, the virtual lab should be archived.
+
+To advance to workshop use, all of the following boxes should be checked, in addition to the criteria for the initial proposal, and co-development:
+
+* User community
+  - [ ] Other potential users have been identified.
 * Data
   - [ ] All input data of the lab is FAIR.
 * Metadata

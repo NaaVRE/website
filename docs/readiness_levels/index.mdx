@@ -1,86 +1,99 @@
-# Readiness level framework for virtual labs on the NaaVRE platform
+---
+sidebar_position: 1
+title: Readiness level framework for co-development of virtual labs on the NaaVRE platform
+---
 
-Version 0.0.2
+import Downward_arrow from './svgs/Downward_arrow.js';
+
+*Version 0.0.2*
 
 The NaaVRE platform facilitates data- and computing-centric research activities by enabling scientists to create customizable virtual labs for specific scientific purposes.
-A collaborative effort between domain specialists,  computational scientists, data scientists, and development and operations engineers
-ensures that virtual labs are optimized to support research effectively.
-Virtual labs evolve through distinct stages: Initially, development is the primary focus. As the lab matures,
-it transitions to support a first user, and ultimately, multiple users can conduct experiments within the environment.
+This is achieved through a collaborative co-development approach, bringing together domain specialists, computational scientists, data scientists, and development and operations engineers.
 
-This readiness level framework assists researchers in building virtual labs by:
-* Defining the content of virtual labs.
-* Describing the roles involved in the development and use of a virtual lab.
-* Describing the progression of a virtual lab through readiness levels, highlighting requirements, milestones and responsibilities.
+This readiness level framework assists researchers in virtual lab co-development by:
+* Introducing the content of virtual labs.
+* Defining stakeholder roles.
+* Describing the progression of a virtual lab through readiness levels,
+highlighting requirements, milestones and responsibilities.
 
 ## Content of a virtual lab
-A virtual lab provides a collection of research tools and assets customized for a specific research need:
+To successfully develop a reusable and maintainable virtual lab, it is important to understand what a virtual lab is made up of.
+A NaaVRE virtual lab provides a collection of research tools and assets customized for a specific research need:
 
 * Assets created in the virtual lab.
 * Documents that support the usability of the virtual lab.
 
+### Assets
 Three types of assets can be created in a virtual lab:
 
 * The codebase: Any code written for the virtual lab. The codebase interacts with external resources such as software libraries and external data.
 * Internal data: Produced in the virtual lab by data processing, data analysis, and simulations.
 * Containerized cells and workflows.
 
+### Documents
 Besides assets, we encourage the developers of a virtual lab to create documents that aid the FAIRness and maintenance of the virtual lab:
 * Metadata.
 * Documentation, including a tutorial.
 
-## Virtual lab roles
+## Stakeholder roles
 NaaVRE aims to be a virtual research environment (VRE) that enables experts in computational ecology and ecological data analysis
 to create virtual labs.
-Our platform needs contributions from the multiple roles to enable innovative research methods. Some people will only have
+Stakeholders are organized into multiple roles to facilitate the collaboration that enables innovative research methods. Some people will only have
 one role for the virtual lab, while others might have multiple of the following roles:
 
-* Virtual lab development roles: Roles involved in the creation of a new virtual lab.
-  * Virtual lab owner / Principal investigator: Coordinates the development of the virtual lab with a scientific vision.
-  This will often be the golden user, i.e. the person that provides the initial publishable use case of the virtual lab.
-  * Virtual lab core developers: Develop a new virtual lab in NaaVRE. Often the virtual lab owner will be one of the core developers.
-  * Virtual lab code reviewers: Provide feedback during co-development on the user-friendliness, maintainability, and robustness of the
+* **Virtual lab usage roles:** Roles for the domain scientists using the virtual lab for their own research.
+  * [Golden user](Virtual_lab_roles/Golden_user): Provides a scientific scenario that be well investigated in NaaVRE. Is involved in developing a
+  new virtual lab and conducts the first research in that virtual lab.
+  * **Silver user:** Starts using a virtual lab developed by others for their own scientific scenarios in a workshop, training or hackathon.
+  Learns how to use the virtual lab through a workshop, training or hackathon.
+  * **Ivory user:** Other users that visit or use the virtual lab in a later stage.
+* **Virtual lab development roles:** Roles involved in the creation of a new virtual lab.
+  * [Virtual lab core developers](Virtual_lab_roles/Core_developer): Develop a new virtual lab in NaaVRE. Often the virtual lab owner will be one of the core developers. Core developers are provided or hired by the golden user.
+  * [Virtual lab code reviewers](Virtual_lab_roles/Reviewer): Provide feedback during co-development on the user-friendliness, maintainability, and robustness of the
   source code and other assets.
-* Virtual lab usage roles: Roles of people who use an existing virtual lab for their own research.
-  * Virtual lab user: Researchers that couple virtual labs assets, and run their own scenarios in the virtual lab by using their own data and parameters.
-  * Virtual lab asset developer: Users who, besides coupling assets and running scenarios, expand and adapt the source code
-  within their own copy of the virtual lab to suit their needs. In the virtual labs the distinction between development
-  and use is a continuum. How many changes a scientist will make to the codebase and libraries depends on whether the virtual lab already has the necessary assets for the user.
-  * Virtual lab visitor: Visits the virtual lab to see how experiments were done and what is possible in the virtual lab.
-* Virtual lab support roles: Roles to support development and use of virtual labs.
-  * Virtual lab trainer: Knows the lab from a user viewpoint and provides trainings to new users. This role will often be assigned to a person who is also the virtual lab owner, a core developer, or service operator.
-  * Virtual lab technical coordinator: Knows the lab from a technical perspective and pushes the lab to the next readiness level. Often, this will be an employee at LifeWatch ERIC VLIC
-  * Virtual lab service operator: Can support users. Knows the potential and limitations of the lab and can help out when problems arise.
-  * Virtual research environment development and operations (VRE DevOps) engineer: Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
-  * Networked infrastructures scientist: Contribute state-of-the-art components to the NaaVRE and can publish technical papers
+  * [Scientific steering board](Virtual_lab_roles/Steering_board): Coordinates the development of the virtual lab with a scientific vision.
+* **Virtual lab support roles:** Roles to support development and use of virtual labs.
+  * [Community supporter](Virtual_lab_roles/Community_supporter): Forms connections between users and the virtual lab.
+  * [Virtual lab trainer](Virtual_lab_roles/Trainer): Knows the lab from a user viewpoint and provides trainings to new users.
+  * [Virtual lab coordinator](Virtual_lab_roles/Coordinator): Knows the lab from a technical perspective and pushes the lab to the next readiness level if there is a user community. Often, this will be an employee at LifeWatch ERIC VLIC
+  * [Virtual research environment development and operations (VRE DevOps) engineer](Virtual_lab_roles/DevOps): Maintains NaaVRE. Often, this will be an employee at LifeWatch ERIC VLIC.
+  * [VRE researcher](Virtual_lab_roles/VRE_researcher): Contributes state-of-the-art components to the NaaVRE and can publish technical papers
   that demonstrate the relevance of NaaVRE in the field of networked systems.
+  * [User supporter](Virtual_lab_roles/User_supporter): Can support users. Knows the potential and limitations of the lab and can help out when problems arise.
+  * [Infrastructure supporter](Virtual_lab_roles/Infrastructure_supporter): Ensures there is infrastructure that allows the virtual lab to be used by multiple users.
+  * **Infrastructure provider:** Organisation that provides infrastructure for the virtual lab.
 
 ## Readiness levels
 We discern five readiness levels in the development of a virtual lab.
-For each higher readiness level improvements are be made to the assets and documents in order to make the lab usable by others
-with an increasing amount of independence from the virtual lab core developers and VRE DevOps team.
+Virtual labs evolve through these readiness level by improving and expanding the assets and documents of the virtual lab.
+Higher readiness levels increase the usability of the lab for others, reducing reliance on core developers and the VRE DevOps team.
 
-* [L0 - Conceptual proposal](readiness_levels/L0_conceptual_proposal): A researcher pitches an idea to the NaaVRE DevOps team. Plans are made to create a new virtual lab.
-* [L1 - Co-development](readiness_levels/L1_co-development): This is the beginning of the development of new data processing, data analysis, or simulation tools in NaaVRE or the conversion of legacy code from a different platform to NaaVRE.
-* [L2 - Validation](readiness_levels/L2_validation_phase): The virtual lab owner uses the virtual lab to run their scientific scenarios to publish a paper.
-* [L3 - Workshop use](readiness_levels/L3_workshop_use): The lab can be used by multiple participants in a workshop, training, or hackathon under the guidance of the virtual lab trainer.
-* [L4 - Operational service](readiness_levels/L4_operational_service): The virtual lab is ready for all scientists to create their own instance of the lab for their research.
+<ul style={{ listStyleType: 'none' }}>
+    <li> <Downward_arrow text="L0"/> [Initial proposal](readiness_levels/L0_initial_proposal): <div>The initial proposal of a virtual lab, with conceptual definition but no technical setup. </div></li>
+    <li> <Downward_arrow text="L1"/> [Co-development](readiness_levels/L1_co-development): <div>A provisioned virtual lab that is ready for the core development team to implement the virtual lab functionality, e.g. new components, workflows, or experiments. </div></li>
+    <li> <Downward_arrow text="L2"/> [Validation phase](readiness_levels/L2_validation_phase): <div>A provisioned virtual lab with developed components. It is ready to run scientific experiments to validate the virtual lab and write scientific publications. </div></li>
+    <li> <Downward_arrow text="L3"/> [Workshop use](readiness_levels/L3_workshop_use): <div>A provisioned virtual lab with validated components and scientific stories. It is ready to engage more users through training and hackathons under controlled conditions. </div></li>
+    <li> <Downward_arrow text="L4"/> [Operational service](readiness_levels/L4_operational_service): <div>A provisioned virtual lab on operational infrastructure. It is ready to be operational for serving users from the general public. </div></li>
+</ul>
 
-|    | Name                | Duration    | Developers                  | Users | Context dissemination            | Entering condition                                                     | Exit condition                                                                     |
-|----|---------------------|-------------|-----------------------------|-------|----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| L0 | Conceptual proposal | 1-12 months | 0                           | 0     |                                  | A good idea & Available resources.                                     | Set up a concrete lab on the platform.                                             |
-| L1 | Co-development      | 3-6 months  | A team of core developers   | 0     | Metadata publication             | A lab & a core development team.                                       | A lab ready for scientific experiments.                                            |
-| L2 | Validation phase    | 3 months    | A team of core developers   | 1     | Paper publication                | A lab ready for writing a scientific paper.                            | One or two papers submitted to publication.                                        |
-| L3 | Workshop use        | 3 months    | 10-25 workshop participants | 10-25 | Workshops, trainings, hackathons | A working lab with documentation and training material.                | The lab has been tested in workshops / hackathons, and has an emerging  community. |
-| L4 | Operational service |             | 10 ≤ asset developers       | 10+   |                                  | The lab is operational, and can be managed on research infrastructure. |                                                                                    |
+| Level | Name                | Duration    | Developers                  | Users | Context dissemination            | Entering condition                                                     | Exit condition                                                                     |
+|-------|---------------------|-------------|-----------------------------|-------|----------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| L0    | initial proposal    | 1-12 months | 0                           | 0     |                                  | A good idea & Available resources.                                     | Set up a concrete lab on the platform.                                             |
+| L1    | Co-development      | 3-6 months  | Core developers 6-12 FTE    | 0     | Metadata publication             | A lab & a core development team.                                       | A lab ready for scientific experiments.                                            |
+| L2    | Validation phase    | 3 months    | A team of core developers   | 1     | Paper publication                | A lab ready for writing a scientific paper.                            | One or two papers submitted to publication.                                        |
+| L3    | Workshop use        | 3 months    | Core developers or users    | 10-25 | Workshops, trainings, hackathons | A working lab with documentation and training material.                | The lab has been tested in workshops / hackathons, and has an emerging  community. |
+| L4    | Operational service |             | Core developers or users    | 10+   |                                  | The lab is operational, and can be managed on research infrastructure. |                                                                                    |
 
-Table 1: Summary of readiness levels, with duration, number of developers and users,
-how the context of the lab is communicated with the outside world, and what conditions per transition should be met.
+*Table 1: Summary of readiness levels, with duration, number of developers and users,
+how the context of the lab is communicated with the outside world, and what conditions per transition should be met.*
 
-![ images/NaaVRE_development_cycle.drawio.png not found](images/NaaVRE_development_cycle.drawio.png)
-Figure1: The virtual lab moves through the readiness levels, from conceptual proposal to operational service.
+![ images/NaaVRE_development_cycle.drawio.png not found](images/NaaVRE_development_cycle.drawio.png)<br/>
+*Figure 1: The virtual lab moves through the readiness levels, from initial proposal to operational service.
 Users coming up with ideas for new experiments that can not be done in the existing virtual labs,
-can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.
+can, in collaboration with LifeWatch, create a new virtual lab that fits their needs.*
+
+![ images/Timeline.drawio.png not found](images/Timeline.drawio.png)<br/>
+*Figure 2: Timeline per readiness level showing the timing of role involvement. See roles pages for details.*
 
 ## Sources
 * These recommendations are partially based on ideas presented in the paper [Introducing the FAIR Principles for research software](https://www.nature.com/articles/s41597-022-01710-x), the [Fair software checklist](https://fairsoftwarechecklist.net/v0.2/), and [fair-software.eu](https://fair-software.eu/recommendations/license).
