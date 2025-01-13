@@ -1,9 +1,7 @@
 ---
 sidebar_position: 1
-title: Vol2bird virtual lab
+title: "RAVRE: Easy processing of weather radar data to vertical profiles of bird migration."
 ---
-### RAVRE: Easy processing of weather radar data to vertical profiles of bird migration.
-
 **Conceptual description:** The RAVRE virtual lab simplifies the process of extracting bird migration data from weather radar data. 
 By automatically importing data from an API and converting it into a suitable format, the lab feeds the Vol2bird algorithm. 
 This algorithm then generates detailed vertical profiles of bird migration and other biological scatterers. 
@@ -36,7 +34,7 @@ ToDo
 ToDo
 
 #### Documentation
-A user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
+See [the documentation page](documentation). Additionally, a user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
 
 #### Point of contact
 Berend-Christiaan Wijers  
@@ -50,16 +48,6 @@ IBED - University of Amsterdam
 #### Recommended prior knowledge
 Picking custom dates to study bird migration using KNMI weather radar data is possible by only setting parameters.  
 Preprocessing other weather radar data to the vol2bird input format requires some experience in handling APIs and data in Python.
-
-### Viewpoints
-#### Mathematical description.
-*ToDo: A mathematical description of the workflow.*
-
-#### Computational description.
-*ToDo: How is the algorithm converted into computational methods?*
-
-#### Engineering implementation / Architecture
-*ToDo: Description of the software architecture of the virtual lab.*
 
 ### Standards
 *ToDo: description of the standards used for data exchange with application programming interfaces and databases.*
