@@ -2,9 +2,9 @@
 sidebar_position: 1
 title: Vol2bird virtual lab
 ---
-### Easy processing of weather radar data to vertical profiles of birds.
+### RAVRE: Easy processing of weather radar data to vertical profiles of bird migration.
 
-**Conceptual description:** The Vol2bird virtual lab streamlines the extraction of bird migration data from weather radar data. 
+**Conceptual description:** The RAVRE virtual lab simplifies the process of extracting bird migration data from weather radar data. 
 By automatically importing data from an API and converting it into a suitable format, the lab feeds the Vol2bird algorithm. 
 This algorithm then generates detailed vertical profiles of bird migration and other biological scatterers. 
 The virtual lab simplifies the use of Vol2bird by providing a user-friendly interface, making advanced bird migration research accessible to a wider audience.
@@ -16,9 +16,9 @@ The virtual lab simplifies the use of Vol2bird by providing a user-friendly inte
   - Altitude profile
 
 #### Features
-- Easy KNMI data retrieval
 - Vol2bird algorithm
 - Mapping to Vol2bird input format
+- Easy KNMI data retrieval
 
 ![ images/Vol2bird_overview_image.drawio.png not found](images/Vol2bird_overview_image.drawio.png)
 
@@ -30,10 +30,10 @@ Dokter AM, Liechti F, Stark H, Delobbe L, Tabary P, Holleman I, J. R. Soc.
 Interface, 8, 30–43, 2011, DOI 10.1098/rsif.2010.0116
 
 #### Related virtual labs
-None
+ToDo
 
 #### Related projects
-None
+ToDo
 
 #### Documentation
 A user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
@@ -45,7 +45,7 @@ IBED - University of Amsterdam
 
 #### Possible applications
 - Select a date range to create a vertical profiles of bird migration.
-- Write your own pre-processor to map other weather radar data to a format readable by vol2bird.
+- Write your own pre-processor to map weather radar data from sources other than KNMI to a format readable by vol2bird.
 
 #### Recommended prior knowledge
 Picking custom dates to study bird migration using KNMI weather radar data is possible by only setting parameters.  
