@@ -5,7 +5,7 @@ title: Virtual lab roles
 I propose the following role division for the vol2bird lab:
 
 * **Virtual lab usage roles:**
-  * [Golden user](../Virtual_lab_roles/Golden_user): To be found though demos and workshops.
+  * [Golden user](../Virtual_lab_roles/Golden_user): To be found through demos and workshops.
   * **Silver user:** To emerge from workshops.
   * **Ivory user:** Far in the future.
 * **Virtual lab development roles:**

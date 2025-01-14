@@ -2,10 +2,13 @@
 sidebar_position: 1
 title: "RAVRE: Easy processing of weather radar data to vertical profiles of bird migration."
 ---
-**Conceptual description:** The RAVRE virtual lab simplifies the process of extracting bird migration data from weather radar data. 
-By automatically importing data from an API and converting it into a suitable format, the lab feeds the Vol2bird algorithm. 
-This algorithm then generates detailed vertical profiles of bird migration and other biological scatterers. 
-The virtual lab simplifies the use of Vol2bird by providing a user-friendly interface, making advanced bird migration research accessible to a wider audience.
+**Conceptual description:** The airspace is becoming increasingly crowded. High-rises, wind farms and airports all contribute to conflict with aerial organisms. Information about the movements of organisms in the air is required to identify stop-over sites, migratory routes, and patterns. This can inform mitigation of conflicts by, for example, wind-turbine curtailments or early warning systems for aviation. Weather radars, that continuously monitor the sky across continents, can be used to study movements of birds, bats, and insects. However, for continental scale analysis, large volumes of data are required to be processed and analyzed, which often rely on institute-specific tools and computational resources. This severely hampers collaborative efforts because of the initial investment of time and resources to gain access to existing computing infrastructure. Here we show a Radar Aeroecology Virtual Research Environment (RAVRE) which uses the Lifewatch ERIC infrastructure to facilitate collaboration and re-use of infrastructure and tools. By providing RAVRE, we aim to facilitate collaboration between ornithological institutes. 
+
+This Virtual Lab (VL) will reduce the initial investment of acquiring access and expertise to computational resources and provide immediate access to tools built by domain experts. These tools are then run in the cloud leveraging the performance and flexibility of cloud computing.
+
+The VL is shipped with the data management plan used by the University of Amsterdam's Animal Movement Ecology group (UvA IBED-TCE AME) to provide an out of the box solution for managing large datasets. 
+
+RAVRE is currently capable of accessing, processing, managing and visualizing data from the The Royal Netherlands Meteorological Institute's (RNMI) open Radar Data repository. The VL has multi-language support, and has well known libraries such as bioRad in R and xradar in Python installed.  Furthermore, it uses vol2bird for processing biological echoes found in Polar Volume files to Vertical Profiles. 
 
 #### Keywords 
   - Bird migration
