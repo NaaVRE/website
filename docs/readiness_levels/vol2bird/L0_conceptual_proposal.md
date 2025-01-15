@@ -11,7 +11,10 @@ The following milestones can be achieved during the phase L0 of virtual lab deve
 ### Exit conditions
 * Plan
   - [ ] There is an ambitious and realistic development plan for the virtual lab.
-  - [ ] A timeline exists for the co-development, validation of the virtual lab and development of training material.
+  - [X] A timeline exists for the co-development, validation of the virtual lab and development of training material.
+    - *Proposal:*
+    - *L2 Validation phase: 11 Feb: At Netherlands Annual Ecology Meeting we could demonstrate the virtual lab.*
+    - *L3 Workshop use: 1 April 2025: Hirad meeting.*
 * Codebase
   - [X] A new virtual lab is created.
 * Version control
