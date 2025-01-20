@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: Virtual lab roles
 ---
-I propose the following role division for the vol2bird lab:
+I propose the following role division for the RAVRE lab:
 
 * **Virtual lab usage roles:**
   * [Golden user](../Virtual_lab_roles/Golden_user): To be found through demos and workshops.

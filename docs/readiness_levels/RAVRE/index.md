@@ -21,7 +21,7 @@ RAVRE is currently capable of accessing, processing, managing and visualizing da
 - Mapping to Vol2bird input format
 - Easy KNMI data retrieval
 
-![ images/Vol2bird_overview_image.drawio.png not found](images/Vol2bird_overview_image.drawio.png)
+![ images/RAVRE_overview_image.drawio.png not found](images/RAVRE_overview_image.drawio.png)
 
 **License:** Apache-2.0
 
