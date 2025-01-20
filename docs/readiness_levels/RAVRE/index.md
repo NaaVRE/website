@@ -10,6 +10,8 @@ The VL is shipped with the data management plan used by the University of Amster
 
 RAVRE is currently capable of accessing, processing, managing and visualizing data from the The Royal Netherlands Meteorological Institute's (RNMI) open Radar Data repository. The VL has multi-language support, and has well known libraries such as bioRad in R and xradar in Python installed.  Furthermore, it uses vol2bird for processing biological echoes found in Polar Volume files to Vertical Profiles. 
 
+[Readiness level](/docs/readiness_levels/RAVRE/development_log): L1 - co-development 
+
 #### Keywords 
   - Bird migration
   - Radar ontology
