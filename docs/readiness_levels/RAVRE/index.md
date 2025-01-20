@@ -51,7 +51,7 @@ Picking custom dates to study biological scatters using KNMI weather radar data 
 Preprocessing other weather radar data to the vol2bird input format requires some experience in handling APIs and data in Python.
 
 ### Documentation
-See [the documentation page](../readiness_levels/RAVRE/documentation). Additionally, a user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
+See [the documentation page](../RAVRE/documentation). Additionally, a user guide and tutorial is available in [the virtual lab](https://naavre.lifewatch.dev/vreapp/vlabs/vol2bird).
 
 ### Point of contact
 Berend-Christiaan Wijers  

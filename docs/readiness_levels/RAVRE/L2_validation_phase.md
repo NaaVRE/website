@@ -27,7 +27,7 @@ for co-development, and additionally meets the following requirements:
 * Scenarios
   - [ ] The virtual lab can be used in multiple scenarios, i.e. both the parameters and datasets can be changed to suit experiments of different researchers.
 * Documentation
-  - [ ] There is a [user manual](../user_manual) and at least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual.
+  - [ ] There is a user manual and at least one domain scientist who was not involved in the development of the virtual lab has reviewed the user manual.
 The coding experience of the reviewer of the user manual is similar to the coding experience of the intended user.
   - [ ] How to use the virtual lab on a different scenario is explained.
 * Codebase
