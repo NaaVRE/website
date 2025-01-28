@@ -124,11 +124,11 @@ e <- round(1.555, 2)
 
 The type detector can detect the type of variables that have not been explicitly assigned a primitive value.
 
-![type_detector_1](https://github.com/user-attachments/assets/28aebab5-a125-434a-a4b9-ef81dcfd1c0a)
+![type_detector_1](images/types_detector_R_1.png)
 
 By pressing the `Type Detector` button, the selected cell will be executed by the kernel and the types of the detected variables will be retrieved. However, this does require that the selected cell is executable and that all used variables are initialized.
 
-![type_detector_2](https://github.com/user-attachments/assets/b209d692-2b70-4a2f-ad89-2964eb2f9d76)
+![type_detector_2](images/types_detector_R_2.png)
 
 In R, new variables can be added to the environment without explicit initialization, leading to instances where additional inputs are detected. This is especially common when working with dataframes, where variables for columns may be implicitly created. Unwanted input variables can be removed by pressing the `X` button next to the variable.
 
