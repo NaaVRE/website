@@ -8,10 +8,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://qcdis.github.io',
+  url: 'https://naavre.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/NaaVRE-website/',
+  baseUrl: '',
 
   // GitHub pages deployment config.
   organizationName: 'QCDIS',
@@ -33,11 +33,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
+          editUrl: 'https://github.com/NaaVRE/naavre.github.io/blob/main/'
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/QCDIS/NaaVRE-website/blob/main/'
+          editUrl: 'https://github.com/NaaVRE/naavre.github.io/blob/main/'
         },
         theme: {
           customCss: './src/css/custom.css'
