@@ -24,6 +24,11 @@ export default function HomepageHeader (): React.ReactElement {
             to="/docs/tutorials">
             Getting started
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="https://docs.google.com/forms/d/e/1FAIpQLSdbF6lrAYUx2CH7oxpjKWAa3mH2bSIPKJB5BkRa3xZStTcJOg/viewform?usp=dialog">
+            Get in touch
+          </Link>
         </div>
       </div>
     </header>
