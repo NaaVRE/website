@@ -112,6 +112,10 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/QCDIS/NaaVRE'
+            },
+            {
+                label: 'Get in touch',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdbF6lrAYUx2CH7oxpjKWAa3mH2bSIPKJB5BkRa3xZStTcJOg/viewform'
             }
           ]
         }
